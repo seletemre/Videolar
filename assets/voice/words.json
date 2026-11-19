@@ -1,0 +1,457 @@
+{
+ "v1": {
+  "text": "Bu mantara binlerce yıldır ölümsüzlük mantarı deniyor; işte Ganoderma hakkında beş çarpıcı bilgi.",
+  "words": [
+   {
+    "text": "Bu",
+    "start": 0.095458,
+    "end": 0.243166
+   },
+   {
+    "text": "mantara",
+    "start": 0.493166,
+    "end": 0.913624
+   },
+   {
+    "text": "binlerce",
+    "start": 0.925,
+    "end": 1.425
+   },
+   {
+    "text": "yıldır",
+    "start": 1.425,
+    "end": 1.720458
+   },
+   {
+    "text": "ölümsüzlük",
+    "start": 1.720458,
+    "end": 2.265916
+   },
+   {
+    "text": "mantarı",
+    "start": 2.265916,
+    "end": 2.674999
+   },
+   {
+    "text": "deniyor",
+    "start": 2.675,
+    "end": 3.061375
+   },
+   {
+    "text": "işte",
+    "start": 3.277291,
+    "end": 3.538624
+   },
+   {
+    "text": "Ganoderma",
+    "start": 3.538625,
+    "end": 4.038625
+   },
+   {
+    "text": "hakkında",
+    "start": 4.038625,
+    "end": 4.425
+   },
+   {
+    "text": "beş",
+    "start": 4.425,
+    "end": 4.618166
+   },
+   {
+    "text": "çarpıcı",
+    "start": 4.618166,
+    "end": 5.084082
+   },
+   {
+    "text": "bilgi",
+    "start": 5.084083,
+    "end": 5.413624
+   }
+  ]
+ },
+ "v2": {
+  "text": "Bir: Çin'de Lingzhi, Japonya'da Reishi diye bilinir ve iki bin yılı aşkın süredir kullanılır.",
+  "words": [
+   {
+    "text": "Bir",
+    "start": 0.095458,
+    "end": 0.197749
+   },
+   {
+    "text": "Çin'de",
+    "start": 0.470458,
+    "end": 0.743166
+   },
+   {
+    "text": "Lingzhi",
+    "start": 0.743166,
+    "end": 1.152249
+   },
+   {
+    "text": "Japonya'da",
+    "start": 1.288625,
+    "end": 1.890916
+   },
+   {
+    "text": "Reishi",
+    "start": 1.890916,
+    "end": 2.220457
+   },
+   {
+    "text": "diye",
+    "start": 2.220458,
+    "end": 2.436374
+   },
+   {
+    "text": "bilinir",
+    "start": 2.436375,
+    "end": 2.788666
+   },
+   {
+    "text": "ve",
+    "start": 2.822708,
+    "end": 2.936333
+   },
+   {
+    "text": "iki",
+    "start": 2.947708,
+    "end": 3.152249
+   },
+   {
+    "text": "bin",
+    "start": 3.152291,
+    "end": 3.288624
+   },
+   {
+    "text": "yılı",
+    "start": 3.288625,
+    "end": 3.481791
+   },
+   {
+    "text": "aşkın",
+    "start": 3.481833,
+    "end": 3.811374
+   },
+   {
+    "text": "süredir",
+    "start": 3.811375,
+    "end": 4.163625
+   },
+   {
+    "text": "kullanılır",
+    "start": 4.163625,
+    "end": 4.709083
+   }
+  ]
+ },
+ "v3": {
+  "text": "İki: Adı Yunancadan gelir; ganos parlak, derma deri demek, yani cila gibi parlayan şapkası.",
+  "words": [
+   {
+    "text": "İki",
+    "start": 0.095458,
+    "end": 0.265916
+   },
+   {
+    "text": "Adı",
+    "start": 0.481833,
+    "end": 0.686374
+   },
+   {
+    "text": "Yunancadan",
+    "start": 0.697708,
+    "end": 1.243166
+   },
+   {
+    "text": "gelir",
+    "start": 1.254541,
+    "end": 1.561374
+   },
+   {
+    "text": "ganos",
+    "start": 1.697708,
+    "end": 2.061333
+   },
+   {
+    "text": "parlak",
+    "start": 2.061375,
+    "end": 2.481833
+   },
+   {
+    "text": "derma",
+    "start": 2.652291,
+    "end": 2.993166
+   },
+   {
+    "text": "deri",
+    "start": 2.993166,
+    "end": 3.209082
+   },
+   {
+    "text": "demek",
+    "start": 3.209083,
+    "end": 3.538624
+   },
+   {
+    "text": "yani",
+    "start": 3.720458,
+    "end": 4.084083
+   },
+   {
+    "text": "cila",
+    "start": 4.084083,
+    "end": 4.379541
+   },
+   {
+    "text": "gibi",
+    "start": 4.390916,
+    "end": 4.584082
+   },
+   {
+    "text": "parlayan",
+    "start": 4.584083,
+    "end": 5.038624
+   },
+   {
+    "text": "şapkası",
+    "start": 5.038625,
+    "end": 5.561333
+   }
+  ]
+ },
+ "v4": {
+  "text": "Üç: Dört yüzden fazla biyoaktif bileşen içerir; acı tadını triterpenler verir.",
+  "words": [
+   {
+    "text": "Üç",
+    "start": 0.095458,
+    "end": 0.163624
+   },
+   {
+    "text": "Dört",
+    "start": 0.470458,
+    "end": 0.709083
+   },
+   {
+    "text": "yüzden",
+    "start": 0.731833,
+    "end": 1.061374
+   },
+   {
+    "text": "fazla",
+    "start": 1.061375,
+    "end": 1.413625
+   },
+   {
+    "text": "biyoaktif",
+    "start": 1.413625,
+    "end": 1.90225
+   },
+   {
+    "text": "bileşen",
+    "start": 1.902291,
+    "end": 2.277291
+   },
+   {
+    "text": "içerir",
+    "start": 2.277291,
+    "end": 2.663666
+   },
+   {
+    "text": "acı",
+    "start": 2.811375,
+    "end": 3.015916
+   },
+   {
+    "text": "tadını",
+    "start": 3.015916,
+    "end": 3.322707
+   },
+   {
+    "text": "triterpenler",
+    "start": 3.322708,
+    "end": 4.072708
+   },
+   {
+    "text": "verir",
+    "start": 4.072708,
+    "end": 4.368166
+   }
+  ]
+ },
+ "v5": {
+  "text": "Dört: Solungacı yoktur, sporlarını minik gözeneklerden saçar; akrabası tek sezonda trilyonlarca spor yayabilir.",
+  "words": [
+   {
+    "text": "Dört",
+    "start": 0.095458,
+    "end": 0.459083
+   },
+   {
+    "text": "Solungacı",
+    "start": 0.640916,
+    "end": 1.231832
+   },
+   {
+    "text": "yoktur",
+    "start": 1.231833,
+    "end": 1.606833
+   },
+   {
+    "text": "sporlarını",
+    "start": 1.743166,
+    "end": 2.368166
+   },
+   {
+    "text": "minik",
+    "start": 2.368166,
+    "end": 2.606791
+   },
+   {
+    "text": "gözeneklerden",
+    "start": 2.606833,
+    "end": 3.402291
+   },
+   {
+    "text": "saçar",
+    "start": 3.402291,
+    "end": 3.799999
+   },
+   {
+    "text": "akrabası",
+    "start": 3.936375,
+    "end": 4.504541
+   },
+   {
+    "text": "tek",
+    "start": 4.504541,
+    "end": 4.720457
+   },
+   {
+    "text": "sezonda",
+    "start": 4.720458,
+    "end": 5.163624
+   },
+   {
+    "text": "trilyonlarca",
+    "start": 5.163625,
+    "end": 5.845458
+   },
+   {
+    "text": "spor",
+    "start": 5.845458,
+    "end": 6.186374
+   },
+   {
+    "text": "yayabilir",
+    "start": 6.186375,
+    "end": 6.709083
+   }
+  ]
+ },
+ "v6": {
+  "text": "Beş: Bağışıklık üzerindeki etkileri bugün hâlâ bilimsel olarak araştırılıyor.",
+  "words": [
+   {
+    "text": "Beş",
+    "start": 0.095458,
+    "end": 0.231833
+   },
+   {
+    "text": "Bağışıklık",
+    "start": 0.504541,
+    "end": 1.049999
+   },
+   {
+    "text": "üzerindeki",
+    "start": 1.05,
+    "end": 1.55
+   },
+   {
+    "text": "etkileri",
+    "start": 1.55,
+    "end": 2.004541
+   },
+   {
+    "text": "bugün",
+    "start": 2.038625,
+    "end": 2.345458
+   },
+   {
+    "text": "hâlâ",
+    "start": 2.345458,
+    "end": 2.709083
+   },
+   {
+    "text": "bilimsel",
+    "start": 2.709083,
+    "end": 3.129541
+   },
+   {
+    "text": "olarak",
+    "start": 3.129541,
+    "end": 3.402249
+   },
+   {
+    "text": "araştırılıyor",
+    "start": 3.402291,
+    "end": 4.049999
+   }
+  ]
+ },
+ "v7": {
+  "text": "Daha fazlası için ganoselet'i takip et, merak ettiklerini mesajla sor.",
+  "words": [
+   {
+    "text": "Daha",
+    "start": 0.095458,
+    "end": 0.390916
+   },
+   {
+    "text": "fazlası",
+    "start": 0.527291,
+    "end": 0.981832
+   },
+   {
+    "text": "için",
+    "start": 0.981833,
+    "end": 1.209083
+   },
+   {
+    "text": "ganoselet'i",
+    "start": 1.209083,
+    "end": 1.799999
+   },
+   {
+    "text": "takip",
+    "start": 1.8,
+    "end": 2.186375
+   },
+   {
+    "text": "et",
+    "start": 2.209083,
+    "end": 2.356791
+   },
+   {
+    "text": "merak",
+    "start": 2.572708,
+    "end": 2.890874
+   },
+   {
+    "text": "ettiklerini",
+    "start": 2.890916,
+    "end": 3.413624
+   },
+   {
+    "text": "mesajla",
+    "start": 3.413625,
+    "end": 3.890916
+   },
+   {
+    "text": "sor",
+    "start": 3.890916,
+    "end": 4.186374
+   }
+  ]
+ }
+}

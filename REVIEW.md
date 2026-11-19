@@ -1,28 +1,21 @@
-# REVIEW — Ganoderma: 5 çarpıcı bilgi
+# REVIEW — Ganoderma: 5 çarpıcı bilgi (v2, Instagram hikâye)
 
-Çıktı: `renders/ganoderma.mp4` (git'e eklenmez) · 38,5 sn · 1920×1080 · 30 fps · H.264 + AAC
+Çıktı: `renders/ganoderma-story.mp4` (git'e eklenmez) · 44,3 sn · 1080×1920 · 30 fps · H.264 + AAC
 
-## Yaratıcı kararlar
-- Kullanıcı "en iyisini sen yap" dediği için hikâye seçeneği sorulmadı; tek hikâye kuruldu:
-  "Ölümsüzlük mantarı" kancası → 5 bilgi → @ganoselet kapanışı.
-- Her bilgi kendi dünyasında anlatılıyor: yosun yeşili, cila kırmızısı, kehribar, kabuk kahvesi, kemik beyazı.
-  Renklerin hepsi mantarın kendisinden alındı.
-- Kahraman nesne SVG ile çizilmiş bir reishi: cilalı şapka, büyüme halkaları, yandan çıkan sap.
-  Geçişlerin çoğu nesneden çıkıyor: şapka kadrajı doldurup kırmızı zemine dönüşüyor, 400 nokta düşüp spora dönüşüyor,
-  mantar son sahneye taşınıyor.
-- Sağlık vaadi yok. Yalnızca kaynağı olan bilgiler kullanıldı (SPEC.md › Kaynaklar). Sonda "tıbbi tavsiye değildir" notu var.
-- Kurulmayan alternatifler: (1) tek planlık, kesintisiz zoom ile mantarın içine yolculuk;
-  (2) "efsane mi, gerçek mi?" yapısı: yanlış kanının üstü çizilip doğrusu yazılıyor.
+## Bu sürümde değişenler
+- Format 1080×1920'ye taşındı. Sahneler dikey olarak baştan dizildi; okunan metinler 269–1248 px bandında.
+- Mantar yeniden çizildi: basık yelpaze biçiminde şapka, stile doğru daralan büyüme halkaları, ince ışınsal oluklar,
+  cila yansımaları, krem renkli büyüyen kenar ve gözenekli alt yüz. Kaynak `tools/shroom.mjs`.
+- Türkçe erkek seslendirme eklendi: Microsoft Edge TTS, "tr-TR-AhmetNeural", %10 hızlı. Her ekran animasyonu,
+  söylendiği kelimeye göre zamanlandı.
+- 6. sahneden kapanışa mantar aynı yerde kalıyor, kapanış onun etrafında kuruluyor.
 
 ## Ölçülen / bakılan
-- `check`: 0 hata, 0 uyarı (lint, runtime, layout, contrast, craft, audio).
-- Bakıldı: kontrol kareleri, kesme şeritleri ve telefon genişliği (360 px).
-- Ses yalnızca ölçüldü, dinlenmedi: −16,5 LUFS, tepe −1,4 dBTP, kırpılma yok.
-  Efektler 8,1 / 18,8 / 26,4 / 33 sn'de görüntüdeki olaylara denk düşüyor.
+- `check`: 0 hata. Bilerek bırakılan tek uyarı: 霊芝 karakterlerinin üst kenarı Reels bandına birkaç piksel taşıyor (süs niteliğinde).
+  TikTok sol kenar uyarıları hedef dışı.
+- Ses ölçüldü ama dinlenmedi: −14,5 LUFS, tepe −2,3 dBTP, kırpılma yok. Sessizlikler yalnızca sahne aralarında.
 
-## Eksikler / sonraki adım
-- Müzik yok: müzik kataloğu HeyGen girişi istiyor. Giriş: `npx hyperframes auth login`.
-  Ya da kendi parçanızı `assets/` klasörüne koyun.
-- Henüz yalnızca @ganoselet kullanılıyor; kullanıcı adının altına konacak isim bekleniyor.
-- En zayıf plan: 6. sahne (3 sn). Mantar ve tek bir cümleden oluşuyor; daha çok zaman olsa bir araştırma görseli eklenirdi.
-- Kullanıcı adı, s1 ve s7'de `handle` değişkeniyle değiştirilebilir.
+## Eksikler
+- Müzik yok. HeyGen ağ politikası nedeniyle bu ortamdan erişilemiyor.
+- İsim henüz yok; kullanıcı adının altına eklenecek.
+- Mantar hâlâ çizim. Gerçek bir fotoğraf için Wikimedia/HeyGen erişimi gerekiyor.

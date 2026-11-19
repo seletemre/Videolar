@@ -1,8 +1,9 @@
 # SPEC — Ganoderma: 5 çarpıcı bilgi
 
 GOAL:    İzleyici Ganoderma'nın (Reishi) neden "ölümsüzlük mantarı" diye anıldığını 5 doğru bilgiyle öğrenir ve @ganoselet'i takip etmek / DM atmak ister.
-OUTPUT:  HyperFrames, 1920 x 1080, 30 fps
-TIME:    38.5 s x 30 = 1155 kare. Müzik yok (HeyGen girişi yok), yalnızca görünür olaylara bağlı efektler.
+OUTPUT:  HyperFrames, 1080 x 1920 (Instagram hikâye), 30 fps
+TIME:    44.3 s x 30 = 1329 kare. Erkek seslendirme (tr-TR-AhmetNeural, Edge TTS) saat görevi görür; efektler sesin altında. Müzik yok.
+SAFE:    Okunan her metin y 269–1248 bandında (Reels/hikâye arayüzü); bandın dışında yalnızca mantar, kütük, nokta gibi süsler.
 LOOK:    Ortam = mantarın kendisi: cilalı kırmızı-kahve şapka, büyüme halkaları, sarı-krem kenar.
          Zeminler (sahne başına bir dünya): yosun yeşili #2F4A2A, cila kırmızısı #5E140C, kehribar #E8A33A,
          kabuk kahvesi #241510, kemik beyazı #EFE4CC.
@@ -33,3 +34,9 @@ QA:      0 s (küçük resim dolu), 2.5, 8.5, 14, 20, 27, 31, 36 s — Türkçe 
   triterpenler (acılık) ve polisakkaritler, adın Yunanca ganos (parlak) + derma (deri) kökeni.
 - Buller'ın G. applanatum ölçümü (~günde 30 milyar, ~6 ay → ~5 trilyon spor), mikoloji literatüründe yaygın.
 - Gözenekli alt yüz (solungaçsız, polipor) — temel mikoloji.
+
+## v2 — dikey + seslendirme
+- Sahne başlangıçları: s1 0 · s2 6.3 · s3 11.9 · s4 18.4 · s5 24.4 · s6 32.5 · s7 37.4 (bitiş 44.3).
+- Seslendirme metni ve kelime zamanları: assets/voice/words.json. Her animasyon kendi kelimesine bağlı (sahne içi yorumlara bakın).
+- Mantar artık tools/shroom.mjs ile üretiliyor (ince halkalar, ışınsal oluklar, cila yansımaları, krem gözenekli alt yüz).
+  Değiştirince: node tools/expand.mjs compositions/*.html
