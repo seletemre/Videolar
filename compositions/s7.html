@@ -1,0 +1,153 @@
+<template>
+  <style>
+    #root {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      background: #5e140c;
+      font-family: "Inter", sans-serif;
+      color: #f4ebd6;
+    }
+    #s7-shroom-wrap {
+      position: absolute;
+      left: 150px;
+      top: 300px;
+      width: 620px;
+      height: 455px;
+    }
+    .s7-shroom {
+      width: 100%;
+      height: 100%;
+    }
+    #s7-pre {
+      position: absolute;
+      left: 880px;
+      top: 300px;
+      font-size: 44px;
+      font-weight: 600;
+      opacity: 0.85;
+    }
+    #s7-handle-row {
+      position: absolute;
+      left: 870px;
+      top: 380px;
+      display: flex;
+      align-items: center;
+      gap: 26px;
+    }
+    #s7-handle-row svg {
+      width: 112px;
+      height: 112px;
+      color: #e8a33a;
+    }
+    #s7-handle {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 800;
+      font-size: 124px;
+      line-height: 1;
+      letter-spacing: -0.02em;
+      color: #e8a33a;
+      white-space: nowrap;
+    }
+    #s7-handle span {
+      opacity: 0;
+    }
+    #s7-cta {
+      position: absolute;
+      left: 880px;
+      top: 560px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 800;
+      font-size: 72px;
+      line-height: 1.1;
+    }
+    #s7-cta-sub {
+      position: absolute;
+      left: 882px;
+      top: 660px;
+      width: 860px;
+      font-size: 40px;
+      font-weight: 500;
+      line-height: 1.25;
+      opacity: 0.9;
+    }
+    #s7-note {
+      position: absolute;
+      left: 150px;
+      top: 930px;
+      font-size: 28px;
+      font-weight: 500;
+      opacity: 0.7;
+    }
+  </style>
+  <div id="root" data-composition-id="s7" data-width="1920" data-height="1080"
+    data-composition-variables='[{"id":"handle","type":"string","label":"Instagram kullanıcı adı","default":"@ganoselet"}]'>
+    <div id="s7-shroom-wrap"><svg class="s7-shroom" viewBox="0 0 600 440" aria-hidden="true">
+          <defs>
+            <radialGradient id="s7-cap" cx="48%" cy="58%" r="62%">
+              <stop offset="0" stop-color="#2A0806" />
+              <stop offset="0.38" stop-color="#5E140C" />
+              <stop offset="0.64" stop-color="#9B2C12" />
+              <stop offset="0.82" stop-color="#D2691C" />
+              <stop offset="0.93" stop-color="#EDB24A" />
+              <stop offset="1" stop-color="#F6E7B8" />
+            </radialGradient>
+            <linearGradient id="s7-gloss" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#ffffff" stop-opacity="0.65" />
+              <stop offset="1" stop-color="#ffffff" stop-opacity="0" />
+            </linearGradient>
+            <linearGradient id="s7-stem" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#2A0806" />
+              <stop offset="0.5" stop-color="#7A2210" />
+              <stop offset="1" stop-color="#3A0D08" />
+            </linearGradient>
+            <clipPath id="s7-clip"><path d="M60 230 C 40 140, 160 60, 300 60 C 450 60, 570 130, 550 220 C 540 270, 470 290, 400 280 C 360 275, 340 262, 300 262 C 255 262, 230 280, 180 285 C 110 290, 70 270, 60 230 Z" /></clipPath>
+          </defs>
+          <path d="M282 250 C 276 300, 298 350, 286 430 L 334 430 C 340 350, 322 300, 322 250 Z" fill="url(#s7-stem)" />
+          <path d="M60 230 C 40 140, 160 60, 300 60 C 450 60, 570 130, 550 220 C 540 270, 470 290, 400 280 C 360 275, 340 262, 300 262 C 255 262, 230 280, 180 285 C 110 290, 70 270, 60 230 Z" fill="url(#s7-cap)" />
+          <g clip-path="url(#s7-clip)" fill="none" stroke="#2A0806" stroke-opacity="0.32" stroke-width="3">
+            <path d="M60 230 C 40 140, 160 60, 300 60 C 450 60, 570 130, 550 220 C 540 270, 470 290, 400 280 C 360 275, 340 262, 300 262 C 255 262, 230 280, 180 285 C 110 290, 70 270, 60 230 Z" transform="translate(300 175) scale(0.86) translate(-300 -175)" />
+            <path d="M60 230 C 40 140, 160 60, 300 60 C 450 60, 570 130, 550 220 C 540 270, 470 290, 400 280 C 360 275, 340 262, 300 262 C 255 262, 230 280, 180 285 C 110 290, 70 270, 60 230 Z" transform="translate(300 175) scale(0.71) translate(-300 -175)" />
+            <path d="M60 230 C 40 140, 160 60, 300 60 C 450 60, 570 130, 550 220 C 540 270, 470 290, 400 280 C 360 275, 340 262, 300 262 C 255 262, 230 280, 180 285 C 110 290, 70 270, 60 230 Z" transform="translate(300 175) scale(0.56) translate(-300 -175)" />
+            <path d="M60 230 C 40 140, 160 60, 300 60 C 450 60, 570 130, 550 220 C 540 270, 470 290, 400 280 C 360 275, 340 262, 300 262 C 255 262, 230 280, 180 285 C 110 290, 70 270, 60 230 Z" transform="translate(300 175) scale(0.40) translate(-300 -175)" />
+          </g>
+          <g clip-path="url(#s7-clip)">
+            <ellipse cx="250" cy="112" rx="175" ry="38" fill="url(#s7-gloss)" opacity="0.55" transform="rotate(-8 250 112)" />
+            <rect id="s7-shine" x="-140" y="0" width="70" height="440" fill="#ffffff" opacity="0" transform="skewX(-20)" />
+          </g>
+          <path d="M60 230 C 40 140, 160 60, 300 60 C 450 60, 570 130, 550 220 C 540 270, 470 290, 400 280 C 360 275, 340 262, 300 262 C 255 262, 230 280, 180 285 C 110 290, 70 270, 60 230 Z" fill="none" stroke="#F6E7B8" stroke-width="5" stroke-opacity="0.85" />
+        </svg></div>
+    <p id="s7-pre">Daha fazla Ganoderma bilgisi için</p>
+    <div id="s7-handle-row">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="4" y="4" width="40" height="40" rx="12" fill="none" stroke="currentColor" stroke-width="4" /><circle cx="24" cy="24" r="9" fill="none" stroke="currentColor" stroke-width="4" /><circle cx="35" cy="13" r="2.6" fill="currentColor" /></svg>
+      <div id="s7-handle" data-var-text="handle">@ganoselet</div>
+    </div>
+    <p id="s7-cta">Takip et · DM at</p>
+    <p id="s7-cta-sub">Merak ettiklerini Instagram'dan mesajla sor</p>
+    <p id="s7-note">Bu video bilgilendirme amaçlıdır, tıbbi tavsiye değildir.</p>
+  </div>
+  <script>
+    // type the handle letter by letter: wrap each character once at init (keeps the variable's value)
+    const h = document.getElementById("s7-handle");
+    const text = h.textContent.trim();
+    h.textContent = "";
+    for (const ch of text) {
+      const s = document.createElement("span");
+      s.textContent = ch;
+      h.appendChild(s);
+    }
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#root", { backgroundColor: "#2f4a2a" }, { backgroundColor: "#5e140c", duration: 0.4, ease: "power2.inOut" }, 0);
+    tl.fromTo("#s7-shroom-wrap", { x: 330, y: -37 }, { x: 0, y: 0, duration: 0.7, ease: "expo.out" }, 0);
+    tl.fromTo("#s7-pre", { opacity: 0, filter: "blur(6px)" }, { opacity: 0.85, filter: "blur(0px)", duration: 0.2, ease: "power4.out" }, 0.2);
+    tl.fromTo("#s7-handle-row svg", { scale: 0, rotation: -20 }, { scale: 1, rotation: 0, duration: 0.5, ease: "back.out(1.6)" }, 0.4);
+    tl.fromTo("#s7-handle span", { opacity: 0 }, { opacity: 1, duration: 0.01, stagger: 0.075 }, 0.55);
+    // impact at 1.4 s: the typed handle punches once
+    tl.fromTo("#s7-handle", { scale: 1 }, { scale: 1.08, duration: 0.09, ease: "power2.out", yoyo: true, repeat: 1, transformOrigin: "0% 50%" }, 1.4);
+    tl.fromTo("#s7-cta", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power4.out" }, 1.75);
+    tl.fromTo("#s7-cta-sub", { opacity: 0, filter: "blur(6px)" }, { opacity: 0.9, filter: "blur(0px)", duration: 0.2, ease: "power4.out" }, 2.1);
+    tl.fromTo("#s7-note", { opacity: 0 }, { opacity: 0.7, duration: 0.3, ease: "power2.out" }, 2.4);
+    tl.fromTo("#s7-shine", { attr: { x: -140 }, opacity: 0.4 }, { attr: { x: 760 }, opacity: 0.4, duration: 1.0, ease: "power2.inOut" }, 1.4);
+    window.__timelines["s7"] = tl;
+  </script>
+</template>

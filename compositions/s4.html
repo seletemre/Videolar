@@ -1,0 +1,140 @@
+<template>
+  <style>
+    #root {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      background: #241510;
+      font-family: "Inter", sans-serif;
+      color: #f4ebd6;
+    }
+    #s4-field {
+      position: absolute;
+      left: 820px;
+      top: 90px;
+      width: 1000px;
+      height: 900px;
+    }
+    .s4-dot {
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      margin: -7px 0 0 -7px;
+      border-radius: 50%;
+      background: #8a5a3c;
+    }
+    .s4-dot.tri {
+      background: #e8a33a;
+    }
+    .s4-dot.poly {
+      background: #f4ebd6;
+    }
+    #s4-num {
+      position: absolute;
+      left: 150px;
+      top: 210px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 800;
+      font-size: 260px;
+      line-height: 1;
+      letter-spacing: -0.03em;
+      color: #e8a33a;
+    }
+    #s4-line {
+      position: absolute;
+      left: 160px;
+      top: 490px;
+      width: 620px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 800;
+      font-size: 62px;
+      line-height: 1.1;
+    }
+    .s4-label {
+      position: absolute;
+      left: 160px;
+      width: 620px;
+      display: flex;
+      align-items: flex-start;
+      gap: 22px;
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    .s4-label .sw {
+      flex: none;
+      width: 30px;
+      height: 30px;
+      margin-top: 8px;
+      border-radius: 50%;
+    }
+    .s4-label small {
+      display: block;
+      font-size: 34px;
+      font-weight: 500;
+      opacity: 0.8;
+    }
+    #s4-l1 {
+      top: 700px;
+    }
+    #s4-l1 .sw {
+      background: #e8a33a;
+    }
+    #s4-l2 {
+      top: 840px;
+    }
+    #s4-l2 .sw {
+      background: #f4ebd6;
+    }
+  </style>
+  <div id="root" data-composition-id="s4" data-width="1920" data-height="1080">
+    <div id="s4-field" data-layout-ignore></div>
+    <div id="s4-num"><span id="s4-num-val">0</span>+</div>
+    <p id="s4-line">biyoaktif bileşen barındırır</p>
+    <div class="s4-label" id="s4-l1"><span class="sw"></span><span>Triterpenler<small>acı tadını bunlar verir</small></span></div>
+    <div class="s4-label" id="s4-l2"><span class="sw"></span><span>Polisakkaritler<small>beta-glukanlar dahil</small></span></div>
+  </div>
+  <script>
+    // 400 compounds as 400 dots: positions from a seeded generator, so every frame is reproducible
+    let seed = 7;
+    const rand = () => ((seed = (seed * 16807) % 2147483647) - 1) / 2147483646;
+    const field = document.getElementById("s4-field");
+    const dots = [];
+    for (let i = 0; i < 400; i++) {
+      // loose cluster: denser toward the middle of the field
+      const a = rand() * Math.PI * 2;
+      const r = Math.sqrt(rand()) * 0.5;
+      const d = document.createElement("div");
+      d.className = "s4-dot" + (i % 7 === 0 ? " tri" : i % 7 === 3 ? " poly" : "");
+      d.style.left = (50 + Math.cos(a) * r * 96) + "%";
+      d.style.top = (50 + Math.sin(a) * r * 96) + "%";
+      field.appendChild(d);
+      dots.push(d);
+    }
+    const plain = dots.filter((d) => !d.classList.contains("tri") && !d.classList.contains("poly"));
+    const tri = dots.filter((d) => d.classList.contains("tri"));
+    const poly = dots.filter((d) => d.classList.contains("poly"));
+
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#root", { backgroundColor: "#e8a33a" }, { backgroundColor: "#241510", duration: 0.4, ease: "power2.inOut" }, 0);
+    // the network densifies while the counter climbs to 400 (lands at 2.3 s, pop)
+    tl.fromTo(dots, { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.25, ease: "back.out(2)", stagger: { each: 1.9 / 400 } }, 0.12);
+    tl.fromTo("#s4-num", { opacity: 0, filter: "blur(10px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power4.out" }, 0.12);
+    const counter = { v: 0 };
+    tl.fromTo(counter, { v: 0 }, {
+      v: 400, duration: 2.18, ease: "power1.inOut",
+      onUpdate: () => { document.getElementById("s4-num-val").textContent = Math.round(counter.v); },
+    }, 0.12);
+    tl.fromTo("#s4-line", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power4.out" }, 1.0);
+    // two families are named: the rest dims, theirs grow
+    tl.to(plain, { opacity: 0.25, duration: 0.4, ease: "power2.out" }, 2.8);
+    tl.fromTo(tri, { scale: 1 }, { scale: 1.7, duration: 0.5, ease: "expo.out" }, 2.9);
+    tl.fromTo("#s4-l1", { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.5, ease: "expo.out" }, 2.9);
+    tl.fromTo(poly, { scale: 1 }, { scale: 1.7, duration: 0.5, ease: "expo.out" }, 3.6);
+    tl.fromTo("#s4-l2", { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.5, ease: "expo.out" }, 3.6);
+    // exit: the dots fall out of frame, becoming the spores of s5
+    tl.to(dots, { y: 1100, duration: 0.55, ease: "power3.in", stagger: { each: 0.0006, from: "end" } }, 5.9);
+    tl.to(["#s4-num", "#s4-line", "#s4-l1", "#s4-l2"], { opacity: 0, filter: "blur(10px)", duration: 0.2, ease: "power2.in" }, 6.0);
+    window.__timelines["s4"] = tl;
+  </script>
+</template>

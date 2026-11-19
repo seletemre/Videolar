@@ -1,0 +1,109 @@
+<template>
+  <style>
+    #root {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      background: #5e140c;
+      font-family: "Inter", sans-serif;
+      color: #f4ebd6;
+    }
+    #s2-stage {
+      position: absolute;
+      inset: 0;
+    }
+    #s2-kanji {
+      position: absolute;
+      left: 120px;
+      top: 170px;
+      font-family: "Noto Sans JP", sans-serif;
+      font-weight: 700;
+      font-size: 400px;
+      line-height: 1;
+      color: #f4ebd6;
+      display: flex;
+    }
+    #s2-kanji span {
+      display: inline-block;
+    }
+    #s2-kanji-note {
+      position: absolute;
+      left: 140px;
+      top: 640px;
+      font-size: 34px;
+      font-weight: 500;
+      opacity: 0.8;
+    }
+    #s2-names {
+      position: absolute;
+      left: 1040px;
+      top: 190px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 800;
+      font-size: 64px;
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+    }
+    #s2-names div {
+      display: block;
+    }
+    #s2-names b {
+      color: #e8a33a;
+      font-weight: 800;
+    }
+    #s2-num {
+      position: absolute;
+      left: 1030px;
+      top: 470px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 800;
+      font-size: 230px;
+      line-height: 1;
+      letter-spacing: -0.03em;
+      color: #f4ebd6;
+    }
+    #s2-num-label {
+      position: absolute;
+      left: 1040px;
+      top: 720px;
+      width: 760px;
+      font-size: 50px;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+  </style>
+  <div id="root" data-composition-id="s2" data-width="1920" data-height="1080">
+    <div id="s2-stage">
+      <div id="s2-kanji"><span id="s2-k1">霊</span><span id="s2-k2">芝</span></div>
+      <p id="s2-kanji-note">霊芝 — Japonca “Reishi”</p>
+      <div id="s2-names">
+        <div id="s2-n1">Çin'de <b>Lingzhi</b></div>
+        <div id="s2-n2">Japonya'da <b>Reishi</b></div>
+      </div>
+      <div id="s2-num"><span id="s2-num-val">0</span>+</div>
+      <p id="s2-num-label">yıldır geleneksel tıpta kullanılıyor</p>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    // arrives from the red of s1's cap: the stage settles in from slightly large
+    tl.fromTo("#s2-stage", { scale: 1.08, filter: "blur(10px)" }, { scale: 1, filter: "blur(0px)", duration: 0.5, ease: "expo.out" }, 0);
+    tl.fromTo("#s2-k1", { opacity: 0.0, filter: "blur(14px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.35, ease: "power4.out" }, 0.05);
+    tl.fromTo("#s2-k2", { opacity: 0.0, filter: "blur(14px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.35, ease: "power4.out" }, 0.18);
+    tl.fromTo("#s2-kanji-note", { opacity: 0 }, { opacity: 0.8, duration: 0.3, ease: "power2.out" }, 0.7);
+    tl.fromTo("#s2-n1", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.18, ease: "power4.out" }, 0.55);
+    tl.fromTo("#s2-n2", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.18, ease: "power4.out" }, 0.85);
+    // the number counts up and lands at 2.6 s (pop)
+    tl.fromTo("#s2-num", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.5, ease: "expo.out" }, 1.55);
+    const counter = { v: 0 };
+    tl.fromTo(counter, { v: 0 }, {
+      v: 2000, duration: 1.05, ease: "power3.out",
+      onUpdate: () => { document.getElementById("s2-num-val").textContent = Math.round(counter.v).toLocaleString("tr-TR"); },
+    }, 1.55);
+    tl.fromTo("#s2-num", { scale: 1 }, { scale: 1.06, duration: 0.08, ease: "power2.out", yoyo: true, repeat: 1, transformOrigin: "0% 50%" }, 2.6);
+    tl.fromTo("#s2-num-label", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power4.out" }, 2.4);
+    // exit: whip left
+    tl.to("#s2-stage", { x: -700, opacity: 0, filter: "blur(16px)", duration: 0.4, ease: "power3.in" }, 5.1);
+    window.__timelines["s2"] = tl;
+  </script>
+</template>
