@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1920px; height: 1080px; overflow: hidden; background: #0b1d17; }
+      #root {
+        position: absolute; inset: 0; overflow: hidden;
+        background: #0b1d17;
+        font-family: "Inter", sans-serif; color: #f4f7f2;
+      }
+      .clip { position: absolute; inset: 0; overflow: hidden; }
+      .bg { position: absolute; inset: 0; }
+      .h { font-family: "Montserrat", sans-serif; font-weight: 800; letter-spacing: -0.02em; line-height: 1.02; }
+      .lbl { font-size: 34px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #8fe0b1; }
+      .body { font-size: 46px; font-weight: 600; line-height: 1.35; }
+      .acc { color: #f2b544; }
+      .abs { position: absolute; }
+      .card {
+        position: absolute; width: 480px; height: 330px; padding: 36px 40px;
+        border-radius: 28px; background: rgba(244, 247, 242, 0.07);
+        border: 2px solid rgba(143, 224, 177, 0.35);
+      }
+      .card .num { font-family: "Montserrat", sans-serif; font-weight: 800; font-size: 64px; color: #f2b544; }
+      .card .t { font-size: 40px; font-weight: 700; margin-top: 14px; }
+      .card .d { font-size: 30px; font-weight: 500; margin-top: 10px; color: #cfe3d7; line-height: 1.3; }
+      .photo { position: absolute; border-radius: 26px; overflow: hidden; box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45); }
+      .photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+      .foot { position: absolute; left: 120px; bottom: 50px; font-size: 28px; color: #a9c4b5; font-weight: 500; }
+      .rule { position: absolute; height: 6px; width: 160px; background: #f2b544; border-radius: 3px; }
+      .dot { position: absolute; width: 16px; height: 16px; border-radius: 50%; background: #8fe0b1; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="45" data-width="1920" data-height="1080">
+
+      <!-- S1 · 0–5 : hook -->
+      <div id="s1" class="clip" data-start="0" data-duration="5" data-track-index="1" data-track-kind="graphics">
+        <div class="bg" style="background:#0b1d17"></div>
+        <div class="lbl abs" id="s1-lbl" style="left:120px; top:250px">Ağız bakımı</div>
+        <div class="h abs" id="s1-h" style="left:120px; top:310px; width:1060px; font-size:104px">Dişlerinizi her gün fırçalıyorsunuz.</div>
+        <div class="body abs" id="s1-sub" style="left:120px; top:730px; width:1000px"><span class="acc">Peki ya tam bakım?</span></div>
+        <div class="photo" id="s1-photo" style="left:1240px; top:60px; width:540px; height:960px"><img src="assets/product.jpg" alt="Gano Fresh" /></div>
+      </div>
+
+      <!-- S2 · 5–9 : product -->
+      <div id="s2" class="clip" data-start="5" data-duration="4" data-track-index="1" data-track-kind="graphics">
+        <div class="bg" style="background:#5e140c"></div>
+        <div class="h abs" id="s2-brand" style="left:120px; top:360px; font-size:150px; color:#f4f7f2">GANO FRESH</div>
+        <div class="rule abs" id="s2-rule" style="left:124px; top:560px"></div>
+        <div class="body abs" id="s2-sub" style="left:120px; top:610px; width:1000px">Ganoderma lucidum özütü ve ferah nane tadı</div>
+        <div class="photo" id="s2-photo" style="left:1240px; top:60px; width:540px; height:960px"><img src="assets/product.jpg" alt="Gano Fresh" /></div>
+      </div>
+
+      <!-- S3 · 9–18 : science (cautious) -->
+      <div id="s3" class="clip" data-start="9" data-duration="9" data-track-index="1" data-track-kind="graphics">
+        <div class="bg" style="background:#2f4a2a"></div>
+        <div class="lbl abs" id="s3-lbl" style="left:120px; top:200px">Ganoderma lucidum</div>
+        <div class="h abs" id="s3-h" style="left:120px; top:260px; width:1000px; font-size:124px">Reishi mantarı</div>
+        <div class="body abs" id="s3-b1" style="left:120px; top:500px; width:1000px">Geleneksel kullanımıyla uzun yıllardır tanınır.</div>
+        <div class="body abs" id="s3-b2" style="left:120px; top:650px; width:1000px"><span class="acc">Laboratuvar çalışmalarında</span> plak oluşumunu azaltıcı etki gösterdi.</div>
+        <div class="foot" id="s3-foot">Bulgular laboratuvar ortamına aittir. Ürün tıbbi tedavi yerine geçmez.</div>
+        <div class="dot" id="s3-d1" style="left:1500px; top:300px"></div>
+        <div class="dot" id="s3-d2" style="left:1640px; top:520px; width:26px; height:26px"></div>
+        <div class="dot" id="s3-d3" style="left:1430px; top:680px; width:12px; height:12px"></div>
+        <div class="dot" id="s3-d4" style="left:1720px; top:330px; width:10px; height:10px"></div>
+      </div>
+
+      <!-- S4 · 18–27 : routine, three steps -->
+      <div id="s4" class="clip" data-start="18" data-duration="9" data-track-index="1" data-track-kind="graphics">
+        <div class="bg" style="background:#0b1d17"></div>
+        <div class="lbl abs" id="s4-lbl" style="left:120px; top:150px">Ağız sağlığı için üç adım</div>
+        <div class="card" id="s4-c1" style="left:120px; top:300px"><div class="num">01</div><div class="t">Fırçalama</div><div class="d">Sabah ve akşam iki dakika, nazikçe.</div></div>
+        <div class="card" id="s4-c2" style="left:720px; top:300px"><div class="num">02</div><div class="t">Diş ipi</div><div class="d">Diş aralarındaki plağı temizleyin.</div></div>
+        <div class="card" id="s4-c3" style="left:1320px; top:300px"><div class="num">03</div><div class="t">Kontrol</div><div class="d">Diş hekiminizle düzenli kontrole gidin.</div></div>
+        <div class="body abs" id="s4-foot" style="left:120px; top:730px; width:1680px">Güçlü bir rutin, doğru ürünle başlar.</div>
+      </div>
+
+      <!-- S5 · 27–32 : freshness -->
+      <div id="s5" class="clip" data-start="27" data-duration="5" data-track-index="1" data-track-kind="graphics">
+        <div class="bg" style="background:#f2b544"></div>
+        <div class="h abs" id="s5-h1" style="left:120px; top:320px; font-size:180px; color:#0b1d17">Ferah nefes.</div>
+        <div class="h abs" id="s5-h2" style="left:120px; top:520px; font-size:180px; color:#5e140c">Pürüzsüz his.</div>
+        <div class="body abs" id="s5-sub" style="left:120px; top:770px; color:#0b1d17">Her fırçalamada nane ferahlığı.</div>
+      </div>
+
+      <!-- S6 · 32–39 : sales close -->
+      <div id="s6" class="clip" data-start="32" data-duration="7" data-track-index="1" data-track-kind="graphics">
+        <div class="bg" style="background:#5e140c"></div>
+        <div class="lbl abs" id="s6-lbl" style="left:120px; top:260px">Bugün başlayın</div>
+        <div class="h abs" id="s6-h" style="left:120px; top:320px; width:1000px; font-size:120px">Ağız bakımınızı yükseltin.</div>
+        <div class="body abs" id="s6-sub" style="left:120px; top:640px; width:1000px"><span class="acc">Gano Fresh</span>'i deneyin, farkı kendiniz görün.</div>
+        <div class="photo" id="s6-photo" style="left:1240px; top:60px; width:540px; height:960px"><img src="assets/product.jpg" alt="Gano Fresh" /></div>
+      </div>
+
+      <!-- S7 · 39–45 : presenter close-up + contact -->
+      <div id="s7" class="clip" data-start="39" data-duration="6" data-track-index="1" data-track-kind="graphics">
+        <div class="bg" style="background:#0b1d17"></div>
+        <div class="photo" id="s7-photo" style="left:90px; top:90px; width:620px; height:900px; border-radius:30px"><img id="s7-img" src="assets/presenter.jpg" alt="Danışman" style="object-position:50% 22%" /></div>
+        <div class="h abs" id="s7-name" style="left:800px; top:250px; font-size:96px">[Adınız Soyadınız]</div>
+        <div class="lbl abs" id="s7-role" style="left:800px; top:390px">Gano Fresh Danışmanı</div>
+        <div class="body abs" id="s7-tel" style="left:800px; top:500px">📞 [+90 5XX XXX XX XX]</div>
+        <div class="body abs" id="s7-ig" style="left:800px; top:600px">📸 [@kullaniciadi]</div>
+        <div class="body abs" id="s7-cta" style="left:800px; top:730px"><span class="acc">Sipariş ve bilgi için bana ulaşın.</span></div>
+      </div>
+
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      // S1
+      tl.from("#s1-lbl", { opacity: 0, y: 20, duration: 0.5, ease: "power3.out" }, 0.1)
+        .from("#s1-h", { opacity: 0, y: 40, duration: 0.7, ease: "power4.out" }, 0.3)
+        .from("#s1-sub", { opacity: 0, y: 30, duration: 0.6, ease: "power3.out" }, 2.2)
+        .from("#s1-photo", { opacity: 0, x: 80, duration: 0.8, ease: "power3.out" }, 0.2);
+
+      // S2
+      tl.from("#s2-brand", { opacity: 0, scale: 0.92, duration: 0.7, ease: "expo.out" }, 5.1)
+        .from("#s2-rule", { scaleX: 0, transformOrigin: "left center", duration: 0.5, ease: "power3.out" }, 5.7)
+        .from("#s2-sub", { opacity: 0, y: 24, duration: 0.6, ease: "power3.out" }, 6.0)
+        .from("#s2-photo", { opacity: 0, x: 80, duration: 0.8, ease: "power3.out" }, 5.1);
+
+      // S3
+      tl.from("#s3-lbl", { opacity: 0, y: 20, duration: 0.5, ease: "power3.out" }, 9.1)
+        .from("#s3-h", { opacity: 0, y: 40, duration: 0.7, ease: "power4.out" }, 9.3)
+        .from("#s3-b1", { opacity: 0, y: 24, duration: 0.6, ease: "power3.out" }, 10.2)
+        .from("#s3-b2", { opacity: 0, y: 24, duration: 0.6, ease: "power3.out" }, 12.0)
+        .from("#s3-foot", { opacity: 0, duration: 0.6, ease: "power2.out" }, 14.5)
+        .from("#s3-d1, #s3-d2, #s3-d3, #s3-d4", { opacity: 0, scale: 0, duration: 0.5, stagger: 0.12, ease: "back.out(2)" }, 12.5);
+
+      // S4
+      tl.from("#s4-lbl", { opacity: 0, y: 20, duration: 0.5, ease: "power3.out" }, 18.1)
+        .from("#s4-c1", { opacity: 0, y: 40, duration: 0.6, ease: "power3.out" }, 18.5)
+        .from("#s4-c2", { opacity: 0, y: 40, duration: 0.6, ease: "power3.out" }, 19.5)
+        .from("#s4-c3", { opacity: 0, y: 40, duration: 0.6, ease: "power3.out" }, 20.5)
+        .from("#s4-foot", { opacity: 0, y: 20, duration: 0.6, ease: "power3.out" }, 22.0)
+        .to("#s4-c1, #s4-c2, #s4-c3", { y: -14, duration: 1.2, stagger: 0.15, ease: "sine.inOut", yoyo: true, repeat: 1 }, 23.0);
+
+      // S5
+      tl.from("#s5-h1", { opacity: 0, x: -60, duration: 0.6, ease: "expo.out" }, 27.1)
+        .from("#s5-h2", { opacity: 0, x: -60, duration: 0.6, ease: "expo.out" }, 28.0)
+        .from("#s5-sub", { opacity: 0, y: 20, duration: 0.5, ease: "power3.out" }, 29.2);
+
+      // S6
+      tl.from("#s6-lbl", { opacity: 0, y: 20, duration: 0.5, ease: "power3.out" }, 32.1)
+        .from("#s6-h", { opacity: 0, y: 40, duration: 0.7, ease: "power4.out" }, 32.3)
+        .from("#s6-sub", { opacity: 0, y: 24, duration: 0.6, ease: "power3.out" }, 34.0)
+        .from("#s6-photo", { opacity: 0, x: 80, duration: 0.8, ease: "power3.out" }, 32.2)
+        .to("#s6-photo", { y: -24, duration: 4.5, ease: "sine.inOut" }, 33.0);
+
+      // S7 — slow push-in on the close-up, contact details follow
+      tl.from("#s7-photo", { opacity: 0, duration: 0.6, ease: "power2.out" }, 39.0)
+        .fromTo("#s7-img", { scale: 1.0 }, { scale: 1.12, duration: 5.6, ease: "power1.inOut" }, 39.0)
+        .from("#s7-name", { opacity: 0, x: 40, duration: 0.6, ease: "power3.out" }, 39.4)
+        .from("#s7-role", { opacity: 0, x: 40, duration: 0.5, ease: "power3.out" }, 39.9)
+        .from("#s7-tel", { opacity: 0, x: 40, duration: 0.5, ease: "power3.out" }, 40.4)
+        .from("#s7-ig", { opacity: 0, x: 40, duration: 0.5, ease: "power3.out" }, 40.8)
+        .from("#s7-cta", { opacity: 0, y: 20, duration: 0.6, ease: "power3.out" }, 41.4);
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
